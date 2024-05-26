@@ -105,6 +105,7 @@ func isQuestionTypeValid(t QuestionType) bool {
 		t == MultiQuestion
 }
 
+//nolint:gosimple //ok
 func (q *Question) SetUserAnswer(answers []string) error {
 	if answers == nil || len(answers) == 0 {
 		return errors.Wrapf(ErrInvalidParam, "incorrect answers: %v", answers)
